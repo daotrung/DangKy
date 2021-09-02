@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFDFD"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gui_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gui_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gui_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gui_bottom_txtDangKy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.26"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gui_top_edtUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gui_bottom_edtUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.365"/>
+    <TextView
+        android:id="@+id/txtDangKy"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:text="Đăng ký tài khoản"
+        app:layout_constraintStart_toEndOf="@id/gui_left"
+        app:layout_constraintEnd_toEndOf="@id/gui_right"
+        app:layout_constraintBottom_toTopOf="@id/gui_bottom_txtDangKy"
+        app:layout_constraintTop_toBottomOf="@id/gui_top" />
+    <EditText
+        android:id="@+id/edtUserName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/corner"
+        android:paddingLeft="20sp"
+        android:hint="ten tai khoan"
+        app:layout_constraintTop_toBottomOf="@id/gui_top_edtUserName"
+        app:layout_constraintStart_toStartOf="@id/gui_left"
+        app:layout_constraintEnd_toEndOf="@id/gui_right"
+        app:layout_constraintBottom_toTopOf="@id/gui_bottom_edtUserName"/>
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_marginTop="13dp"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:background="@drawable/corner"
+        android:paddingLeft="20sp"
+        android:hint="nhap mat khau"
+        app:layout_constraintTop_toBottomOf="@id/edtUserName"
+        app:layout_constraintStart_toStartOf="@id/gui_left"
+        app:layout_constraintEnd_toEndOf="@id/gui_right" />
+    <EditText
+        android:id="@+id/edtRePassword"
+        android:layout_width="0dp"
+        android:layout_marginTop="13dp"
+        android:layout_height="46dp"
+        android:background="@drawable/corner"
+        android:paddingLeft="20sp"
+        android:hint="nhap lai mat khau"
+        app:layout_constraintTop_toBottomOf="@id/edtPassword"
+        app:layout_constraintStart_toStartOf="@id/gui_left"
+        app:layout_constraintEnd_toEndOf="@id/gui_right"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gui_top_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6"/>
+
+    <Button
+        android:id="@+id/btnLogup"
+        android:layout_width="0dp"
+        android:backgroundTint="#1F9FFC"
+        android:layout_height="wrap_content"
+        android:text="Tiếp tục"
+        app:layout_constraintTop_toBottomOf="@id/gui_top_btn"
+        app:layout_constraintStart_toStartOf="@id/gui_left"
+        app:layout_constraintEnd_toEndOf="@id/gui_right"/>
+    <TextView
+        android:id="@+id/txtWarning"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mat khau khong dung"
+        android:textColor="#ff0000"
+        android:layout_marginTop="18dp"
+        app:layout_constraintTop_toBottomOf="@id/btnLogup"
+        app:layout_constraintStart_toStartOf="@id/gui_left"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gui_right_txtNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.84"/>
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/txtNote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/txtNote"
+        android:textSize="11sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/txtWarning"
+        app:layout_constraintStart_toStartOf="@id/gui_left"
+        app:layout_constraintEnd_toEndOf="@id/gui_right_txtNote"
+        app:layout_constraintBottom_toTopOf="@id/gui_end_all"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gui_end_all"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.9"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DangKy</string>
+    <string name="txtNote">Yêu cầu: \n Tên tài khoản tối thiểu 6 ký tự và không có dấu cách \n Mật khẩu tối thiểu là 8 ký tự và phải trùng nhau\n Nếu không đúng điều kiện sẽ hiển thị lên TextView và \n background của edittext sẽ đổi sang màu đỏ</string>
+</resources>
